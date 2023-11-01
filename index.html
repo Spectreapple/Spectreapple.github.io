@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title> Portfolio Website</title>
+</head>
+<body>
+<div id="main">
+    <div class = "navigation">
+        <a href="index.html" id = "logo">
+            <img src="img/MontLogo.svg" alt="image">
+        </a>
+        <a href="about.html" class= "but" onclick="aboutbut()">About</a>
+        <a href="Work.html" class = "but" onclick="homebut()">Work</a>
+
+    </div>
+
+    <a id = "socials">
+        <img class = "image" src="img/youtube.png" alt="youtube" onclick="yutube()">
+        <img class = "image" src="img/linkedin.png" alt="linkedin" onclick="linked()">
+        <img class = "image" src="img/behance.png" alt="behance" onclick="behan()">
+        <img class = "image" src="img/x.png" alt="x" onclick="xbut()">
+    </a>
+
+    <div id ="mainText">Brian Frankena</div>
+    <div id ="underText">Software Developer</div>
+
+    <a id="ar" href="#content">
+        <img id ="arrow" src="img/arrow.png" alt="arrow">
+    </a>
+</div>
+
+<div id ="content">
+    <a class="cont" href="Work.html#petal">
+        <img class="con" src="img/PWallpaper.jpg" alt="p">
+    </a>
+    <a class="cont" href="Work.html#swordiir">
+        <img class="con" src="img/Swordiir.jpg" alt="S">
+    </a>
+    <a class="cont" href="Work.html#shriu">
+        <img class="con" src="img/ShriuEdit.jpg" alt="SH">
+    </a>
+    <a class="cont" href="Work.html#umbra">
+        <img class="con" src="img/umbraEdit.jpg" alt="U">
+    </a>
+    <a class="cont" href="Work.html#snails">
+        <img class="con" src="img/SnailsEdit.jpg" alt="SN">
+    </a>
+    <a class="cont" href="Work.html#momaze">
+        <img class="con" src="img/movementmazeEdit.jpg" alt="M">
+    </a>
+    <div id = "line"></div>
+    <div class = "txt">Petal a 2D Fantasy platformer based on a vast storyline</div>
+    <div class = "txt">Swordiir is a 3D Action/Adventure game</div>
+    <div class = "txt">A pixel art game called Shriu</div>
+    <div class = "txt">Umbra's Descent is a 1Bit platformer</div>
+    <div class = "txt">100 Snails is a where is waldo inspired game</div>
+    <div class = "txt">Movement Maze is an arcade game made for joysticks</div>
+</div>
+<div id="contact">
+    <form>
+        <div><img src="img/MontLogo.svg" alt="Mont"></div>
+        <div>
+            <label for="subject"></label>
+            <textarea id="subject" name="subject" placeholder="Your name please.."></textarea>
+        </div>
+        <div>
+            <label for="fname"></label>
+            <input type="text" id="fname" name="firstname" placeholder="What the question?" style="height:200px">
+        </div>
+        <input type="submit" value="Mail me" onclick="sendMail(event)">
+    </form>
+</div>
+
+<script src="JVS/myscript.js"></script>
+</body>
+</html>
