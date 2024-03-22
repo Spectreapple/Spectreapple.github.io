@@ -27,3 +27,63 @@ function sendMail(event) {
     const mailtoLink = `mailto:${email}?subject=${subject}&body=${name}`;
     window.location.href = mailtoLink;
 }
+
+function initializeTypedText() {
+    const typedText = new Typed("#typed-text", {
+        strings: ["Brian Frankena", "Montentertainment", "Montzy"], // You can add more strings if needed
+        typeSpeed: 50, // Adjust the typing speed
+        backSpeed: 25, // Adjust the backspacing speed
+        startDelay: 100, // Delay before typing starts
+        backDelay: 1000, // Delay before backspacing
+        showCursor: true, // Show the typing cursor
+        cursorChar: "|", // Typing cursor character
+        loop: true, // Loop the typing animation
+    });
+}
+// Event listener for page load
+window.addEventListener("load", () => {
+    // Initialize Typed.js after the page content is loaded
+    initializeTypedText();
+});
+
+function setDefaultColor(word, color) {
+    var content = document.getElementById('abtBox1').innerHTML;
+    var replacedContent = content.replace(new RegExp(word, 'g'), `<span style="color: ${color}">${word}</span>`);
+    document.getElementById('abtBox1').innerHTML = replacedContent;
+}
+
+setDefaultColor('Brian Frankena', 'lightgreen');
+setDefaultColor('good', 'lightgreen');
+setDefaultColor('open mind', 'pink');
+setDefaultColor('hard', 'red');
+setDefaultColor('indie game developer', 'lightgreen');
+setDefaultColor('Independence', 'lightblue');
+setDefaultColor('connecting', 'lightgreen');
+
+var currentSlide = 0;
+var slides = ["img/b3.jpg", "img/b1.jpg", "img/b2.jpg"]; // Add the paths to your images here
+
+function showSlide(index) {
+    var img = document.getElementById("slideshowImg");
+    if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else if (index >= slides.length) {
+        currentSlide = 0;
+    } else {
+        currentSlide = index;
+    }
+    img.src = slides[currentSlide];
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+// Show the initial slide
+showSlide(currentSlide);
+
+

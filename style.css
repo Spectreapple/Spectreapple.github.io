@@ -1,12 +1,27 @@
+body {
+    overflow-x: hidden;
+    background: linear-gradient(#65a6c6, #3a6380);
+}
+
 * {
     padding: 0;
     margin: 0;
-    background: black;
 }
 
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 20px;
+    filter: saturate(2);
+}
+#bottom-image2 {
+    position: fixed;
+    bottom: 0;
+    left: 20%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    height: 200px;
+    width: 200px;
+    background: none;
 }
 
 #mainText {
@@ -14,45 +29,159 @@ html {
     font-size: 100px;
     text-align: center;
     color: white;
-    height: 45px;
+    height: 75px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 300px;
-    transition-duration: 0.6s;
+    margin-top: 250px;
 }
 
-#mainText:hover{
+#mainContent {
+    margin: 0 200px;
+}
+
+#buttonBox {
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    font-family: 'Agbalumo';
+    font-size: 15px;
+    height: 5vh;
+    width: 6vw;
+    border-radius: 15px;
+    border: none;
+    color: black;
+    background: white;
+    margin: 0 10px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.buttons:hover {
+    transform: scale(1.1);
+    color: lightgreen;
+    cursor: pointer;
+}
+
+#RightArrow:hover{
+
+}
+#LeftArrow:hover{
     font-size: 110px;
     color: palegreen;
     cursor: default;
 }
-#underText{
+
+#content {
     font-family: 'Agbalumo';
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    padding: 0;
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    transition-duration: 0.6s;
+    justify-content: flex-start; /* Align items at the top */
+    margin-top: 42vh; /* Adjust as needed */
+    border-radius: 10px;
+    height: 100vh;
+    width: 100vw;
 }
 
-#underText:hover{
-    font-size: 60px;
-    color: lightpink;
-    cursor: default;
+#abt {
+    font-size: 55px;
+    margin-top: 25px;
+    color: #ffffff;
+    height: 10vh;
+    width: 20vw;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#abtBoxes {
+    display: flex;
+    justify-content: space-around; /* Distribute the boxes horizontally */
+    width: 90%; /* Occupy full width */
+    margin-top: 15vh; /* Adjust as needed */
+    background: none;
+}
+
+#abtBox1 {
+    font-size: 30px;
+    text-align: left;
+    color: white;
+    height: 60vh;
+    width: 35vw;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+    margin-top: 50px;
+}
+
+#abtBox2 {
+    font-size: 55px;
+    color: white;
+    height: 60vh;
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    position: relative;
+}
+
+#abtBox2 img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 30px;
+    object-fit: cover; /* Maintain aspect ratio */
+    position: relative; /* Ensure the image is positioned relative to the parent */
+    z-index: 1; /* Set the z-index higher than the button */
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.3);
+}
+
+#abtBox2 button {
+    font-family: 'Agbalumo';
+    font-size: 25px;
+    position: absolute;
+    top: 102%;
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    border: none;
+    padding: 10px 50px;
+    cursor: pointer;
+    border-radius: 30px;
+    z-index: 0; /* Set the z-index lower than the image */
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.6);
+    transition-duration: 0.4s;
+}
+
+#abtBox2 button:hover {
+    background-color: lightgreen;
 }
 .navigation{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     transition-duration: 0.4s;
     width : 100%;
     margin-top: 10px;
+}
+#mainText, #underText, .but, #coding, #projects {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+@keyframes headerAnimation {
+    to {
+        background-position: 100% 100%;
+    }
 }
 
 a.but{
@@ -61,11 +190,13 @@ a.but{
 
 #logo{
     transition-duration: 0.6s;
+    background: none;
 }
 #logo img {
-    width: 10vw;
-    height: 10vh;
-    padding: 20px;
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    background: none;
 }
 
 #logo:hover{
@@ -84,7 +215,7 @@ a.but{
     cursor: pointer;
 }
 #socials img{
-    max-width: 2vw;
+    max-width: 2.2vw;
     padding: 10px;
     height: auto;
     object-fit: contain;
@@ -95,12 +226,9 @@ a.but{
     font-family: 'Agbalumo';
     font-size: 35px;
     color: white;
-    width: 10vw;
-    height: 5vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-right: 20px;
     transition-duration: 0.2s;
     text-decoration: none;
 }
@@ -118,159 +246,11 @@ a#ar{
 #ar img{
     rotate: 180deg;
 }
-a.cont{
-
-}
-
-#content{
-    display: grid;
-    grid-template-rows: 18% 18% 18% 18% 18% 18%;
-    column-gap: 100px;
-    grid-template-areas:
-    "P L txt"
-    "txt1 L S"
-    "SH L txt2"
-    "txt3 L U"
-    "SN L txt4"
-    "txt5 L M";
-    margin: auto;
-    margin-top: 5%;
-    height: 230vh;
-    border-radius: 25px;
-    align-items: center;
-    justify-content: center;
-}
-.con {
-    max-width: 30vh;
-    border-radius: 25px;
-    display: flex;
-    transition-duration: 0.2s;
-}
-.con:hover{
-    display: flex;
-    transform: scale(1.1,1.1);
-    opacity: 70%;
-    cursor: pointer;
-}
-
 .txt{
     font-family: 'Agbalumo';
     color: white;
     font-size: 45px;
     width: 40vh;
-}
-#line{
-    background: white;
-    width: 5px;
-    height: 100%;
-    border-radius: 25px;
-}
-
-#content img{
-
-}
-
-#content img:nth-child(1){
-    grid-area: P;
-}
-#content img:nth-child(2){
-    grid-area: S;
-}
-#content img:nth-child(3){
-    grid-area: SH;
-}
-#content img:nth-child(4){
-    grid-area: U;
-}
-#content img:nth-child(5){
-    grid-area: SN;
-}
-#content img:nth-child(6){
-    grid-area: M;
-}
-#content div:nth-child(7) {
-    grid-area: L;
-    background: white;
-}
-#content div:nth-child(8) {
-    grid-area: txt;
-}
-#content div:nth-child(9) {
-    grid-area: txt1;
-}
-#content div:nth-child(10) {
-    grid-area: txt2;
-}
-#content div:nth-child(11) {
-    grid-area: txt3;
-}
-#content div:nth-child(12) {
-    grid-area: txt4;
-}
-#content div:nth-child(13) {
-    grid-area: txt5;
-}
-#arrow{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    max-width: 2vw;
-    margin-top: 35vh;
-    transition-duration: 0.6s;
-}
-#arrow:hover{
-    max-width: 2.5vw;
-}
-#contact form{
-    grid-column-gap: 50px;
-    margin: auto;
-    margin-top: 20vh;
-    padding: 50px;
-    width: 50vw;
-    height: 45vh;
-    display: grid;
-    grid-template-columns: 40vh 20vh 10vw;
-    grid-template-rows: 13vh 26vh 4vh;
-    grid-template-areas:
-    "pic title title"
-    "pic text text"
-    "pic . sub";
-}
-#contact form div:nth-child(1){
-    grid-area: pic;
-}
-#contact form div:nth-child(2){
-    grid-area: title;
-    margin-top: 40px;
-}
-#contact form div:nth-child(3){
-    grid-area: text;
-    margin-top: 40px;
-}
-#contact form div:nth-child(4){
-    grid-area: sub;
-}
-input[type=text], select, textarea {
-    font-family: 'Agbalumo';
-    font-size: 30px;
-    width: 100%;
-    box-sizing: border-box;
-    resize: vertical;
-    border-radius: 20px;
-    padding: 15px;
-    background-color: white;
-}
-input[type=submit] {
-    font-family: 'Agbalumo';
-    background-color: white;
-    font-size: 20px;
-    color: black;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    margin-left: 6vw;
-    width: 180px;
 }
 @media only screen and (max-width: 900px){
 
@@ -278,15 +258,15 @@ input[type=submit] {
 #coding{
     display: flex;
     margin: auto;
+    margin-left: 100px;
     justify-content: center;
-    align-items: center;
     font-family: 'Agbalumo';
     color: white;
-    font-size: 80px;
+    font-size: 40px;
     transition-duration: 0.6s;
 }
 #coding:hover{
-    font-size: 82px;
+    font-size: 45px;
     color: lightgreen;
     cursor: default;
 }
@@ -298,218 +278,18 @@ input[type=submit] {
 }
 
 .workBox {
-    width: 10vw;
-    height: 20vh;
+    width: 100px;
+    height: 150px;
     margin: 50px;
-    margin-top: 100px;
+    margin-top: 30px;
 
 }
 .workBox img{
-    max-width: 200px;
+    max-width: 150px;
     transition-duration: 0.4s;
 }
 .workBox img:hover{
     transform: scale(1.1,1.1)
-}
-#projects{
-    display: flex;
-    color: white;
-    margin: auto;
-    margin-top: 60px;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
-    font-family: 'Agbalumo';
-}
-#arrow2{
-    display: flex;
-    margin: auto;
-    margin-top: 5vh;
-    background-image: url("img/arrow.png");
-    background-size: cover;
-    max-width: 5vw;
-    height: 30px;
-    rotate: 180deg;
-}
-
-#line2{
-    display: flex;
-    background-color: white;
-    width: 99vw;
-    height: 2vh;
-    border-radius: 20px;
-    justify-content: center;
-    margin: auto;
-    margin-top: 5vh;
-}
-
-#petal{
-    display: flex;
-    margin: auto;
-    background-image: url('img/Petal background updated.jpg');
-    background-repeat: no-repeat;
-    width: 99vw;
-    height: 100vh;
-    transition-duration: 1s;
-    opacity: 60%;
-    background-position: center;
-    background-size: cover;
-}
-#petal:hover{
-    opacity: 100%;
-}
-#petal img{
-    max-width: 40%;
-    margin-top: 30vh;
-    margin-left: 50px;
-    height: 40%;
-    border-radius: 30px;
-    border-style: solid;
-    border-color: white;
-}
-.text{
-    font-family: 'Agbalumo';
-    background: white;
-    padding: 10px;
-    max-width: 40%;
-    height: 40vh;
-    margin-top: 29vh;
-    margin-left: 5vw;
-    font-size: 22px;
-    color: black;
-    border-radius: 30px;
-}
-#swordiir{
-    display: flex;
-    margin: auto;
-    background-image: url('img/swordiir color corrected.jpg');
-    background-repeat: no-repeat;
-    width: 99vw;
-    height: 100vh;
-    transition-duration: 1s;
-    opacity: 60%;
-    background-position: center;
-    background-size: cover;
-}
-#swordiir:hover{
-    opacity: 100%;
-}
-#swordiir img{
-    max-width: 40%;
-    margin-top: 30vh;
-    margin-left: 50px;
-    height: 40%;
-    border-radius: 30px;
-    border-style: solid;
-    border-color: white;
-}
-#shriu{
-    display: flex;
-    margin: auto;
-    background-image: url('img/Shriu wallpaper.png');
-    background-repeat: no-repeat;
-    width: 99vw;
-    height: 100vh;
-    transition-duration: 1s;
-    opacity: 60%;
-    background-position: center;
-    background-size: cover;
-}
-#shriu:hover{
-    opacity: 100%;
-}
-#shriu img{
-    max-width: 40%;
-    margin-top: 30vh;
-    margin-left: 50px;
-    height: 40%;
-    border-radius: 30px;
-    border-style: solid;
-    border-color: white;
-}
-#umbra{
-    display: flex;
-    margin: auto;
-    background-image: url('img/Wallpaper.jpg');
-    background-repeat: no-repeat;
-    width: 99vw;
-    height: 100vh;
-    transition-duration: 1s;
-    opacity: 60%;
-    background-position: center;
-    background-size: cover;
-}
-#umbra:hover{
-    opacity: 100%;
-}
-#umbra img{
-    max-width: 40%;
-    margin-top: 30vh;
-    margin-left: 50px;
-    height: 40%;
-    border-radius: 30px;
-    border-style: solid;
-    border-color: white;
-}
-#snails{
-    display: flex;
-    margin: auto;
-    background-image: url('img/MenuW.png');
-    background-repeat: no-repeat;
-    width: 99vw;
-    height: 100vh;
-    transition-duration: 1s;
-    opacity: 60%;
-    background-position: center;
-    background-size: cover;
-}
-#snails:hover{
-    opacity: 100%;
-}
-#snails img{
-    max-width: 30%;
-    margin-top: 10vh;
-    margin-left: 50px;
-    height: 30%;
-    border-radius: 30px;
-    border-style: solid;
-    border-color: white;
-}
-.text2{
-    font-family: 'Agbalumo';
-    background: white;
-    padding: 10px;
-    max-width: 53%;
-    height: 20vh;
-    margin-top: 15vh;
-    margin-left: 5vw;
-    font-size: 22px;
-    color: black;
-    border-radius: 30px;
-}
-#momaze{
-    display: flex;
-    margin: auto;
-    background-image: url('img/MovemntMaze.png');
-    background-repeat: no-repeat;
-    width: 99vw;
-    height: 100vh;
-    transition-duration: 1s;
-    opacity: 60%;
-    background-position: center;
-    background-size: cover;
-}
-#momaze:hover{
-    opacity: 100%;
-}
-#momaze img{
-    max-width: 40%;
-    margin-top: 30vh;
-    margin-left: 50px;
-    height: 40%;
-    border-radius: 30px;
-    border-style: solid;
-    border-color: white;
 }
 
 #face{
@@ -557,3 +337,36 @@ input[type=submit] {
     width: 6.5vw;
     height: 5.5vh;
 }
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover-image {
+    width: 350px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+}
+#main {
+    text-align: center;
+}
+
+

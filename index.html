@@ -11,12 +11,11 @@
 <body>
 <div id="main">
     <div class = "navigation">
+        <a href="Work.html" class = "but" onclick="homebut()">Work</a>
         <a href="index.html" id = "logo">
-            <img src="img/MontLogo.svg" alt="image">
+            <img src="img/Logo2.png" alt="image">
         </a>
         <a href="about.html" class= "but" onclick="aboutbut()">About</a>
-        <a href="Work.html" class = "but" onclick="homebut()">Work</a>
-
     </div>
 
     <a id = "socials">
@@ -25,57 +24,45 @@
         <img class = "image" src="img/behance.png" alt="behance" onclick="behan()">
         <img class = "image" src="img/x.png" alt="x" onclick="xbut()">
     </a>
-
-    <div id ="mainText">Brian Frankena</div>
-    <div id ="underText">Software Developer</div>
-
-    <a id="ar" href="#content">
-        <img id ="arrow" src="img/arrow.png" alt="arrow">
-    </a>
-</div>
-
-<div id ="content">
-    <a class="cont" href="Work.html#petal">
-        <img class="con" src="img/PWallpaper.jpg" alt="p">
-    </a>
-    <a class="cont" href="Work.html#swordiir">
-        <img class="con" src="img/Swordiir.jpg" alt="S">
-    </a>
-    <a class="cont" href="Work.html#shriu">
-        <img class="con" src="img/ShriuEdit.jpg" alt="SH">
-    </a>
-    <a class="cont" href="Work.html#umbra">
-        <img class="con" src="img/umbraEdit.jpg" alt="U">
-    </a>
-    <a class="cont" href="Work.html#snails">
-        <img class="con" src="img/SnailsEdit.jpg" alt="SN">
-    </a>
-    <a class="cont" href="Work.html#momaze">
-        <img class="con" src="img/movementmazeEdit.jpg" alt="M">
-    </a>
-    <div id = "line"></div>
-    <div class = "txt">Petal a 2D Fantasy platformer based on a vast storyline</div>
-    <div class = "txt">Swordiir is a 3D Action/Adventure game</div>
-    <div class = "txt">A pixel art game called Shriu</div>
-    <div class = "txt">Umbra's Descent is a 1Bit platformer</div>
-    <div class = "txt">100 Snails is a where is waldo inspired game</div>
-    <div class = "txt">Movement Maze is an arcade game made for joysticks</div>
-</div>
-<div id="contact">
-    <form>
-        <div><img src="img/MontLogo.svg" alt="Mont"></div>
-        <div>
-            <label for="subject"></label>
-            <textarea id="subject" name="subject" placeholder="Your name please.."></textarea>
+    <div id="mainText">
+        <div id="mainContent">
+            <span id="typed-text"></span>
         </div>
-        <div>
-            <label for="fname"></label>
-            <input type="text" id="fname" name="firstname" placeholder="What the question?" style="height:200px">
+    </div>
+    <div id="buttonBox">
+        <button class="buttons">WHO AM I?</button>
+        <button class="buttons">MY WORK</button>
+        <button class="buttons">CONTACT?</button>
+    </div>
+    <div id="content">
+        <div id="abt">
+            About me
         </div>
-        <input type="submit" value="Mail me" onclick="sendMail(event)">
-    </form>
-</div>
+        <div id="abtBoxes">
+            <div id="abtBox1">
+                Hello I'm Brian Frankena,<br>
+                An indie game developer with an open mind.<br>
+                I work hard and have a lot of different good qualities when it comes to shaping a project.<br>
+                I work in all sorts of different environments,<br>
+                One of my good skills is connecting with my team and making sure everything goes smoothly.<br>
+                My Independence is something I'm proud of, if I don't have my team working with me,<br>
+                I am still able to hold my own pretty well<br>
+            </div>
 
+            <div id="abtBox2">
+                <img src="img/b1.jpg" id="slideshowImg" alt="Slideshow Image">
+                <button onclick="nextSlide()">>>>></button>
+            </div>
+
+        </div>
+    </div>
+    <div id="characters">
+        <img id="bottom-image2" src="img/idlesmall.gif" alt="Bottom Image">
+    </div>
+
+
+</div>
 <script src="JVS/myscript.js"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </body>
 </html>
