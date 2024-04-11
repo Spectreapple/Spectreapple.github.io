@@ -360,7 +360,7 @@ a#ar{
     align-items: center;
     transition: opacity 0.6s ease;
     border-radius: 20px;
-    transform-origin: center; /* Set transform origin to center */
+    transform-origin: center;
 }
 
 

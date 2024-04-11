@@ -50,15 +50,13 @@ html{
     margin-bottom: 10px;
 }
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
 #contact-form textarea {
     width: 95%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    resize: none; /* Prevent textarea resizing */
+    resize: none;
 }
 
 #contact-form input[type="submit"] {
@@ -82,3 +80,5 @@ html{
     margin-top: 5vh;
     color: white;
 }
+#contact-form input[type="text"],
+#contact-form input[type="email"],
