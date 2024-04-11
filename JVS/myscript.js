@@ -30,7 +30,7 @@ function sendMail(event) {
 
 function initializeTypedText() {
     const typedText = new Typed("#typed-text", {
-        strings: ["Brian Frankena", "Montentertainment", "Montzy"], // You can add more strings if needed
+        strings: ["Brian Frankena", "MontEntertainment", "Montzy"], // You can add more strings if needed
         typeSpeed: 50, // Adjust the typing speed
         backSpeed: 25, // Adjust the backspacing speed
         startDelay: 100, // Delay before typing starts
@@ -60,8 +60,18 @@ setDefaultColor('indie game developer', 'lightgreen');
 setDefaultColor('Independence', 'lightblue');
 setDefaultColor('connecting', 'lightgreen');
 
+function setDefaultColorNew(word, color) {
+    var content = document.getElementById('workCont3').innerHTML;
+    var replacedContentbox = content.replace(new RegExp(word, 'g'), `<span style="color: ${color}">${word}</span>`);
+    document.getElementById('workCont3').innerHTML = replacedContentbox;
+}
+setDefaultColorNew('C#', 'purple');
+setDefaultColorNew('Javascript', 'yellow');
+setDefaultColorNew('HTML', 'black');
+setDefaultColorNew('CSS', 'blue');
+
 var currentSlide = 0;
-var slides = ["img/b3.jpg", "img/b1.jpg", "img/b2.jpg"]; // Add the paths to your images here
+var slides = ["img/youtubeIMG.jpg", "img/faceimg.jpg"]; // Add the paths to your images here
 
 function showSlide(index) {
     var img = document.getElementById("slideshowImg");
@@ -85,5 +95,7 @@ function prevSlide() {
 
 // Show the initial slide
 showSlide(currentSlide);
+
+
 
 
