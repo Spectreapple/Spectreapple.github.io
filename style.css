@@ -52,13 +52,13 @@ html {
 
 .buttons {
     font-family: 'Agbalumo';
-    font-size: 15px;
+    font-size: 18px;
     height: 5vh;
     width: 6vw;
     border-radius: 15px;
     border: none;
     color: black;
-    background: white;
+    background: rgba(0,0,0,0.2);
     margin: 0 10px;
     box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
     cursor: pointer;
@@ -74,7 +74,7 @@ html {
     text-decoration: none;
 }
 .buttons{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
